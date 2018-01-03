@@ -7,6 +7,15 @@ RSpec.describe Character, type: :model do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:template) }
     it { is_expected.to validate_presence_of(:summary) }
+    it { is_expected.to validate_presence_of(:concept) }
+    it { is_expected.to validate_presence_of(:virtue) }
+    it { is_expected.to validate_presence_of(:vice) }
+    it { is_expected.to validate_presence_of(:birthdate) }
+    it { is_expected.to validate_presence_of(:integrity) }
+    it { is_expected.to validate_presence_of(:size) }
+    it { is_expected.to validate_presence_of(:speed) }
+    it { is_expected.to validate_presence_of(:initiative) }
+    it { is_expected.to validate_presence_of(:defense) }
 
     it { is_expected.to validate_presence_of(:intelligence) }
     it { is_expected.to validate_presence_of(:wits) }

@@ -8,3 +8,8 @@
 
 Character.destroy_all
 10.times { FactoryBot.create(:character) }
+
+Character.all.each do |character|
+    character.player = User.first
+    character.save!
+end

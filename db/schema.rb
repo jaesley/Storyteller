@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171231062635) do
+ActiveRecord::Schema.define(version: 20180102221937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,39 @@ ActiveRecord::Schema.define(version: 20171231062635) do
     t.integer "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "intelligence"
+    t.integer "wits"
+    t.integer "resolve"
+    t.integer "strength"
+    t.integer "dexterity"
+    t.integer "stamina"
+    t.integer "presence"
+    t.integer "manipulation"
+    t.integer "composure"
+    t.integer "academics"
+    t.integer "computers"
+    t.integer "crafts"
+    t.integer "investigation"
+    t.integer "medicine"
+    t.integer "occult"
+    t.integer "politics"
+    t.integer "science"
+    t.integer "athletics"
+    t.integer "brawl"
+    t.integer "drive"
+    t.integer "firearms"
+    t.integer "larceny"
+    t.integer "stealth"
+    t.integer "survival"
+    t.integer "weaponry"
+    t.integer "animal_ken"
+    t.integer "empathy"
+    t.integer "expression"
+    t.integer "intimidation"
+    t.integer "persuasion"
+    t.integer "socialize"
+    t.integer "streetwise"
+    t.integer "subterfuge"
   end
 
   create_table "users", force: :cascade do |t|

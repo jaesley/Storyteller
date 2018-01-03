@@ -1,0 +1,229 @@
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4"><%= @character.name %></h1>
+      <p class="lead"><%= @character.template %></p>
+      <p><%= @character.summary %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm text-center">
+      <h1>Attributes</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <table class="table">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col" colspan="2">Mental</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Intelligence</th>
+            <th scope="row"><%= @character.intelligence %></th>
+          </tr>
+          <tr>
+            <th scope="row">Wits</th>
+            <th scope="row"><%= @character.wits %></th>
+          </tr>
+          <tr>
+            <th scope="row">Resolve</th>
+            <th scope="row"><%= @character.resolve %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-sm">
+      <table class="table">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col" colspan="2">Physical</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Strength</th>
+            <th scope="row"><%= @character.strength %></th>
+          </tr>
+          <tr>
+            <th scope="row">Dexterity</th>
+            <th scope="row"><%= @character.dexterity %></th>
+          </tr>
+          <tr>
+            <th scope="row">Stamina</th>
+            <th scope="row"><%= @character.stamina %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-sm">
+      <table class="table">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col" colspan="2">Social</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Presence</th>
+            <th scope="row"><%= @character.presence %></th>
+          </tr>
+          <tr>
+            <th scope="row">Manipulation</th>
+            <th scope="row"><%= @character.manipulation %></th>
+          </tr>
+          <tr>
+            <th scope="row">Composure</th>
+            <th scope="row"><%= @character.composure %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm text-center">
+      <h1>Skills</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <table class="table">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col" colspan="2">Mental</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Academics</th>
+            <th scope="row"><%= @character.academics %></th>
+          </tr>
+          <tr>
+            <th scope="row">Computers</th>
+            <th scope="row"><%= @character.computers %></th>
+          </tr>
+          <tr>
+            <th scope="row">Crafts</th>
+            <th scope="row"><%= @character.crafts %></th>
+          </tr>
+          <tr>
+            <th scope="row">Investigation</th>
+            <th scope="row"><%= @character.investigation %></th>
+          </tr>
+          <tr>
+            <th scope="row">Medicine</th>
+            <th scope="row"><%= @character.medicine %></th>
+          </tr>
+          <tr>
+            <th scope="row">Occult</th>
+            <th scope="row"><%= @character.occult %></th>
+          </tr>
+          <tr>
+            <th scope="row">Politics</th>
+            <th scope="row"><%= @character.politics %></th>
+          </tr>
+          <tr>
+            <th scope="row">Science</th>
+            <th scope="row"><%= @character.science %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-sm">
+      <table class="table">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col" colspan="2">Physical</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Athletics</th>
+            <th scope="row"><%= @character.athletics %></th>
+          </tr>
+          <tr>
+            <th scope="row">Brawl</th>
+            <th scope="row"><%= @character.brawl %></th>
+          </tr>
+          <tr>
+            <th scope="row">Drive</th>
+            <th scope="row"><%= @character.drive %></th>
+          </tr>
+          <tr>
+            <th scope="row">Firearms</th>
+            <th scope="row"><%= @character.firearms %></th>
+          </tr>
+          <tr>
+            <th scope="row">Larceny</th>
+            <th scope="row"><%= @character.larceny %></th>
+          </tr>
+          <tr>
+            <th scope="row">Stealth</th>
+            <th scope="row"><%= @character.stealth %></th>
+          </tr>
+          <tr>
+            <th scope="row">Survival</th>
+            <th scope="row"><%= @character.survival %></th>
+          </tr>
+          <tr>
+            <th scope="row">Weaponry</th>
+            <th scope="row"><%= @character.weaponry %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-sm">
+      <table class="table">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col" colspan="2">Social</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Animal Ken</th>
+            <th scope="row"><%= @character.animal_ken %></th>
+          </tr>
+          <tr>
+            <th scope="row">Empathy</th>
+            <th scope="row"><%= @character.empathy %></th>
+          </tr>
+          <tr>
+            <th scope="row">Expression</th>
+            <th scope="row"><%= @character.expression %></th>
+          </tr>
+          <tr>
+            <th scope="row">Intimidation</th>
+            <th scope="row"><%= @character.intimidation %></th>
+          </tr>
+          <tr>
+            <th scope="row">Persuasion</th>
+            <th scope="row"><%= @character.persuasion %></th>
+          </tr>
+          <tr>
+            <th scope="row">Socialize</th>
+            <th scope="row"><%= @character.socialize %></th>
+          </tr>
+          <tr>
+            <th scope="row">Streetwise</th>
+            <th scope="row"><%= @character.streetwise %></th>
+          </tr>
+          <tr>
+            <th scope="row">Subterfuge</th>
+            <th scope="row"><%= @character.subterfuge %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

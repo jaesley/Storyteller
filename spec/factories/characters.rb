@@ -2,7 +2,6 @@ FactoryBot.define do
   factory :character do
     name { Faker::HarryPotter.character }
     template { Faker::HarryPotter.house }
-    summary { Faker::Movie.quote }
     intelligence { rand(1..5) }
     wits { rand(1..5) }
     resolve { rand(1..5) }

@@ -5,27 +5,24 @@
         <div class="container">
           <h1 class="display-4"><%= @character.name %></h1>
           <p class="lead"><%= @character.template %></p>
-          <p><%= @character.summary %></p>
+          <p><%= @character.concept %></p>
         </div>
       </div>
     </div>
 
     <div class="col-sm">
       <table class="table">
-        <tbody>
           <tr>
             <th scope="row" colspan="1">Birthdate</th>
             <td scope="row" colspan="3"><%= @character.birthdate.strftime("%B %d, %Y") %></th>
           </tr>
           <tr>
-            <th scope="row" colspan="1">Concept</th>
-            <td scope="row" colspan="3"><%= @character.concept %></th>
+            <th scope="row" colspan="1">Virtue</th>
+            <td scope="row" colspan="3"><%= @character.virtue %></th>
           </tr>
           <tr>
-            <th scope="row">Virtue</th>
-            <td scope="row"><%= @character.virtue %></th>
-            <th scope="row">Vice</th>
-            <td scope="row"><%= @character.vice %></th>
+            <th scope="row" colspan="1">Vice</th>
+            <td scope="row" colspan="3"><%= @character.vice %></th>
           </tr>
           <tr>
             <th scope="row">Health</th>
@@ -45,7 +42,6 @@
             <th scope="row">Speed</th>
             <td scope="row"><%= @character.speed %></th>
           </tr>
-        </tbody>
       </table>
     </div>
   </div>
@@ -269,4 +265,28 @@
       </table>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm text-center">
+      <h1>Merits</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <table class="table">
+        <thead class="thead-dark text-center">
+          <tr>
+            <th scope="col" colspan="2">Mental</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @character.purchased_merits.each do |merit| %>
+          <tr>
+            <th scope="row"><%= merit.name %></th>
+            <td scope="row"><%= merit.level %></th>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 </div>

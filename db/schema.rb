@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180103032828) do
+ActiveRecord::Schema.define(version: 20180103075826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20180103032828) do
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "template"
-    t.string "summary"
     t.integer "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -61,6 +60,26 @@ ActiveRecord::Schema.define(version: 20180103032828) do
     t.string "concept"
     t.integer "integrity"
     t.integer "size"
+  end
+
+  create_table "merits", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.boolean "one"
+    t.boolean "two"
+    t.boolean "three"
+    t.boolean "four"
+    t.boolean "five"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "purchased_merits", force: :cascade do |t|
+    t.integer "character_id"
+    t.integer "merit_id"
+    t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,21 @@
+<%= form_for @merit do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :one %>:
+  <%= f.check_box :one %>
+
+  <%= f.label :two %>:
+  <%= f.check_box :two %>
+
+  <%= f.label :three %>:
+  <%= f.check_box :three %>
+
+  <%= f.label :four %>:
+  <%= f.check_box :four %>
+
+  <%= f.label :five %>:
+  <%= f.check_box :five %><br />
+
+  <%= f.submit %>
+<% end %>

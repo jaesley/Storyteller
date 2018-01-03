@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
 
   resources :characters, only: :show
+  resources :merits, only: [:new, :create]
 end

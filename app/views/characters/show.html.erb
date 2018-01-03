@@ -280,11 +280,11 @@
           </tr>
         </thead>
         <tbody>
-          <% @character.purchased_merits.each do |merit| %>
-          <tr>
-            <th scope="row"><%= merit.name %></th>
-            <td scope="row"><%= merit.level %></th>
-          </tr>
+          <% @character.purchased_merits.each do |purchased_merit| %>
+            <tr>
+              <th scope="row"><%= purchased_merit.merit.name %></th>
+              <td scope="row"><%= purchased_merit.level %></th>
+            </tr>
           <% end %>
         </tbody>
       </table>

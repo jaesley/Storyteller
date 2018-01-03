@@ -9,6 +9,10 @@
 Character.destroy_all
 10.times { FactoryBot.create(:character) }
 
+25.times do
+  PurchasedMerit.create(character: Character.all.sample, merit: Merit.all.sample, level: 3)
+end
+
 Character.all.each do |character|
     character.player = User.first
     character.save!

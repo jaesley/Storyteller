@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :purchased_merit do
-    character_id 1
-    merit_id 1
-    level 1
+    character factory: :character
+    merit factory: :merit
+    level { rand(1..5) }
   end
 end

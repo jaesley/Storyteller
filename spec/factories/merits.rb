@@ -1,11 +1,11 @@
 FactoryBot.define do
   factory :merit do
-    name "MyString"
-    category "MyString"
+    name { Faker::Lorem.word }
+    category { ["mental", "physical", "social"].sample }
     one false
-    two false
+    two true
     three false
-    four false
+    four true
     five false
   end
 end

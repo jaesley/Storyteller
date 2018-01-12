@@ -62,22 +62,15 @@ ActiveRecord::Schema.define(version: 20180103075826) do
     t.integer "size"
   end
 
-  create_table "merits", force: :cascade do |t|
-    t.string "name"
-    t.string "category"
-    t.boolean "one"
-    t.boolean "two"
-    t.boolean "three"
-    t.boolean "four"
-    t.boolean "five"
+  create_table "merit_values", force: :cascade do |t|
+    t.integer "merit_id"
+    t.integer "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "purchased_merits", force: :cascade do |t|
-    t.integer "character_id"
-    t.integer "merit_id"
-    t.integer "level"
+  create_table "merits", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

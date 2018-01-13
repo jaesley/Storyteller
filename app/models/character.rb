@@ -1,7 +1,8 @@
 class Character < ApplicationRecord
   belongs_to :player, class_name: "User", foreign_key: "player_id"
-  has_many :purchased_merits
-  has_many :merits, through: :purchased_merits
+  has_many :merit_purchases
+  has_many :merit_values, through: :merit_purchases
+  has_many :merits, through: :merit_values
 
   validates :name,
             :template,
